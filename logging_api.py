@@ -9,7 +9,11 @@ running_port = sys.argv[1] if len(sys.argv) > 1 else 5000
 output_file = sys.argv[2] if len(sys.argv) > 2 else "log.txt"
 output_target = os.path.join(BASE_LOGFOLDER ,  output_file)
 if not os.path.exists(BASE_LOGFOLDER):
-    os.makedirs(BASE_LOGFOLDER)
+    try :
+        os.makedirs(BASE_LOGFOLDER)
+    except Exception as e:
+        print( f"Erreur à la création du répertoire de log {e}")
+        exit(255)
 
 @app.route('/', methods=['POST'])
 def racine_post():
