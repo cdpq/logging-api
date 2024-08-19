@@ -16,9 +16,7 @@
 <!-- À propos -->
 ## À propos
 
-Cette API reçoit des requêtes dont le contenu est sous le format application x-www-form-urlencoded.
-
-Les logs d'erreur sont ajoutés en texte brut au fichier de sortie.
+Cette API reçoit des informations de livre de bord ou d'erreur et les accumulent dans un fichier brut.
 
 
 
